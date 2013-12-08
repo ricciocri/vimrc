@@ -1,0 +1,164 @@
+# vim: nofoldenable foldmethod=manual
+snippet file
+	file {
+	  "${1:filename}":
+	    ensure => "${3:file}",
+	    source => "puppet:///${2:source}",
+	    owner  => "${4:root}",
+	    group  => "${5:root}",
+	    mode   => '${6:0755}';
+	}
+snippet exec
+	exec {
+	  "${1:name}":
+	    command     => "${2:command}",
+	    refreshonly => "${3:true}",
+	    onlyif      => "${4:run_if_true}",
+	    unless      => "${5:run_if_false}",
+	}
+snippet package
+	package {
+	  "${1:package_name}":
+	    ensure   => "${2:installed}";
+	}
+snippet service
+	service {
+	  "${1:service_name}":
+	    ensure   => "${2:running}";
+	    enable   => "${3:true}";
+	}
+snippet cron
+	cron {
+	  "${1:name}":
+	    command => "${2:command}",
+	    hour    => ${3:hour},
+	    minute  => ${4:minute},
+	    day     => ${5:day};
+	}
+snippet class
+	# Class:: $1
+	#
+	#
+	class ${1:classname} {
+	  ${2:#code...}
+	} # Class:: $1
+snippet def
+	# Define:: $1
+	# Args:: $2
+	#
+	define ${1:defname}(${2:args}) {
+	  ${3:#code}
+	} # Define: $1
+snippet #head
+	# Module:: ${1:modulename}
+	# Manifest:: ${2:init.pp}
+	#
+	# Author:: `system("git config user.name")` (<`system("git config user.email")`>)
+	# Date:: `system("ruby -e 'puts Time.now'")`
+	#
+	${3}
+snippet #class
+	# Module:: ${1:modulename}
+	# Class: ${2:classname}
+	#
+	# ${3:description}
+	#
+	# Author:: `system("git config user.name")` (<`system("git config user.email")`>)
+	# Date:: `system("ruby -e 'puts Time.now'")`
+	#
+	class $1::$2
+	{
+
+	}
+snippet case
+	case $${1:variable} {
+		default: { ${2} }
+	}
+snippet ife
+	if $${1:variable} {
+		${2}
+	} else {
+		${3}
+	}
+snippet if
+	if $${1:variable} {
+		${2}
+	} 
+snippet else
+	else {
+		${1}
+	}
+snippet ?
+	? {
+		'${1}'	=> ${2}
+	  }
+snippet user
+	user{"${1:user}":
+		comment		=> "${2:$1}",
+		ensure		=> present,
+		managehome	=> true,
+		home		=> "${3:/home/$1}"
+	}
+snippet group
+	group{"${1:group}":
+		ensure	=> ${2:present}
+	}
+snippet host
+	host{"${1:hostname}":
+		ip	=> ${2:127.0.0.1}
+	}
+snippet mailalias
+	mailalias{"${1:localpart}":
+		recipient	=> "${2:recipient}"
+	}
+snippet mount
+	mount{"${1:destination path}":
+		ensure	=> ${2:mounted},
+		device	=> "${3:device name or path}"
+	}
+# 
+# blocks etc and general syntax sugar
+snippet [
+	[ ${1} ]${2}
+snippet >
+	${1:key}	=> ${2:attribute},
+snippet p:
+	"puppet://puppet/${1:module name}/${2:file name}"
+#
+# Functions
+snippet alert
+	alert("${1:message}")${2}
+snippet crit
+	crit("${1:message}")${2}
+snippet debug
+	debug("${1:message}")${2}
+snippet defined
+	defined(${1:Resource}["${2:name}"])${3}
+snippet emerg
+	emerg("${1:message}")${2}
+snippet extlookup Simple extlookup 
+	extlookup("${1:variable}")${2}
+snippet extlookup Extlookup with defaults
+	extlookup("${1:variable}", "${2:default}")${3}
+snippet extlookup Extlookup with defaults and custom data file
+	extlookup("${1:variable}", "${2:default}", "${3:data source}")${4}
+snippet fail
+	fail("${1:message}")${2}
+snippet info
+	info("${1:message}")${2}
+snippet inline_template
+	inline_template("<%= ${1} %>")${2}
+snippet notice
+	notice("${1:message}")${2}
+snippet realize
+	realize(${1:Resource}[${2:name}])${3}
+snippet regsubst
+	regsubst(${1:hay stack}, ${2:needle}, "${3:replacement}")${4}
+snippet inc
+	include ${1:classname}${2}
+snippet split
+	split(${1:hay stack}, "${2:patten}")${3}
+snippet versioncmp
+	versioncmp("${1:version}", "${2:version}")${3}
+snippet warning
+	warning("${1:message}")${2}
