@@ -3,9 +3,9 @@ vimrc
 
 This is my vim configuration to work with Git + Puppet manifests, mostly it's based on some good articles about this that I found online:
 
-1 [Using vim and Debian to do puppet development](https://labs.riseup.net/code/documents/8)
-2 [Puppet editing like a pro ](http://jedi.be/blog/2011/12/05/puppet-editing-like-a-pro/)
-3 [Using Vim to edit Puppet code](http://crimsonfu.github.io/2012/08/22/vimpuppet.html)
+1. [Using vim and Debian to do puppet development](https://labs.riseup.net/code/documents/8)
+2. [Puppet editing like a pro ](http://jedi.be/blog/2011/12/05/puppet-editing-like-a-pro/)
+3. [Using Vim to edit Puppet code](http://crimsonfu.github.io/2012/08/22/vimpuppet.html)
 
 Using this repository you'll enable the following plugins:
 
@@ -34,7 +34,7 @@ You should see an output similar to this one:
     Unpacking objects: 100% (17/17), done.
 
 
-===vimrc file
+### vimrc file
 
 Inside the repository there is also the .vimrc file that you have to link in your $HOME, to do this just run the following commands in the terminal
 
@@ -47,7 +47,7 @@ Longer Description of the plugin used:
 
 This is a longer list of the plugin used in this bundle:
 
-=== [Pathogen](https://github.com/tpope/vim-pathogen)
+### [Pathogen](https://github.com/tpope/vim-pathogen)
 
 Manage your 'runtimepath' with ease.  In practical terms, pathogen.vim makes it super easy to install plugins and runtime files in their own private directories. 
 Pathogen is written by Vim plugin guru Tim Pope, it lets you isolate plugin scripts under their own directories. This means easy installs, uninistalls and upgrades.
@@ -58,13 +58,13 @@ So in short with this plugin you just have to install it in the "traditional way
 
 Now any plugins you wish to install can be extracted to a subdirectory under *~/.vim/bundle*, and they will be added to the 'runtimepath'.
 
-=== [syntastic](https://github.com/scrooloose/syntastic.git)
+### [syntastic](https://github.com/scrooloose/syntastic.git)
 
 Syntastic is a syntax checking plugin that runs files through external syntax checkers and displays any resulting errors to the user. This can be done on demand, or automatically as files are saved. If syntax errors are detected, the user is notified and is happy because they didn't have to compile their code or execute their script to find them.
 
 For puppet Syntastic can run both the command <puppet parser validate> for syntax errors and the command <puppet-lint> that will analyze your manifests and look for deviatins from the Puppet style guide, please note that both command must be present on the machine and available in your path, once you save the file you'll get a screen similar to this if there are some errors:
 
-![syntastic error]("http://linuxaria.com/wp-content/uploads/2013/12/syntastic.png)
+![syntastic error](http://linuxaria.com/wp-content/uploads/2013/12/syntastic.png "Syntastic screenshot")
 
 Also both checkers are enabled in this configuration, if you want to disable the parser or puppet-lint just edit your .vimrc file and check for that commented directive:
 
@@ -73,7 +73,7 @@ Also both checkers are enabled in this configuration, if you want to disable the
 
 Uncommenting it will disable the parser, if you want to disable puppet-lint substitute ['puppet'] to ['puppetlint'].
 
-=== [vim-puppet](https://github.com/rodjek/vim-puppet.git)
+### [vim-puppet](https://github.com/rodjek/vim-puppet.git)
 
 Make vim more Puppet friendly! This plugin provide the following features:
 
@@ -81,12 +81,12 @@ Make vim more Puppet friendly! This plugin provide the following features:
 - Syntax highlighting
 - Automatic => alignment (when the tabular plugin is also installed)
 
-=== [tabular](https://github.com/godlygeek/tabular.git)
+### [tabular](https://github.com/godlygeek/tabular.git)
 
 This plugin it's great to have an automatic alignment of all your => and can be really useful also in other situations, check this [short video](http://vimcasts.org/episodes/aligning-text-with-tabular-vim/) for an introduction to tabular plugin.
 
 
-=== [snipmate.vim](https://github.com/msanders/snipmate.vim.git)
+### [snipmate.vim](https://github.com/msanders/snipmate.vim.git)
 
 This plugin it's probably my favourite in this bundle, with it you can just type the name of a puppet resource such as file, press the  <tab> key and get you'll get a result like this:
 
@@ -104,7 +104,7 @@ You can manage the snippets editing them directly, they are located in the file 
 
 A video it's probably the best way to see this small plugin in action, so check this [small video](http://www.screenr.com/su7), when you see the code appear it means that the operator has pressed the <tab> key.
 
-=== [vim-fugitive](https://github.com/tpope/vim-fugitive.git)
+### [vim-fugitive](https://github.com/tpope/vim-fugitive.git)
 
 Another great plugin, with this you can control directly from vim the status of the file you are editing in git, basically you can give in vim some <Gcommand> and work directly on git, some example are:
 
