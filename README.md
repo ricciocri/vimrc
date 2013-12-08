@@ -62,7 +62,7 @@ Now any plugins you wish to install can be extracted to a subdirectory under *~/
 
 Syntastic is a syntax checking plugin that runs files through external syntax checkers and displays any resulting errors to the user. This can be done on demand, or automatically as files are saved. If syntax errors are detected, the user is notified and is happy because they didn't have to compile their code or execute their script to find them.
 
-For puppet Syntastic can run both the command <puppet parser validate> for syntax errors and the command <puppet-lint> that will analyze your manifests and look for deviatins from the Puppet style guide, please note that both command must be present on the machine and available in your path, once you save the file you'll get a screen similar to this if there are some errors:
+For puppet Syntastic can run both the command `puppet parser validate` for syntax errors and the command `puppet-lint` that will analyze your manifests and look for deviatins from the Puppet style guide, please note that both command must be present on the machine and available in your path, once you save the file you'll get a screen similar to this if there are some errors:
 
 ![syntastic error](http://linuxaria.com/wp-content/uploads/2013/12/syntastic.png "Syntastic screenshot")
 
@@ -88,7 +88,7 @@ This plugin it's great to have an automatic alignment of all your => and can be 
 
 ### [snipmate.vim](https://github.com/msanders/snipmate.vim.git)
 
-This plugin it's probably my favourite in this bundle, with it you can just type the name of a puppet resource such as file, press the  <tab> key and get you'll get a result like this:
+This plugin it's probably my favourite in this bundle, with it you can just type the name of a puppet resource such as file, press the  `tab` key and get you'll get a result like this:
 
 
 file {
@@ -99,28 +99,28 @@ file {
       group  => "root",
       mode   => '0755';
 
-Pressing <tab> again you'll move through the various *stop point* that are defined in the snippet, usually they are the values for the various keys. 
+Pressing `tab` again you'll move through the various *stop point* that are defined in the snippet, usually they are the values for the various keys. 
 You can manage the snippets editing them directly, they are located in the file ~/.vim/snippets/puppet.snippets
 
-A video it's probably the best way to see this small plugin in action, so check this [small video](http://www.screenr.com/su7), when you see the code appear it means that the operator has pressed the <tab> key.
+A video it's probably the best way to see this small plugin in action, so check this [small video](http://www.screenr.com/su7), when you see the code appear it means that the operator has pressed the `tab` key.
 
 ### [vim-fugitive](https://github.com/tpope/vim-fugitive.git)
 
-Another great plugin, with this you can control directly from vim the status of the file you are editing in git, basically you can give in vim some <Gcommand> and work directly on git, some example are:
+Another great plugin, with this you can control directly from vim the status of the file you are editing in git, basically you can give in vim some `Gcommand` and work directly on git, some example are:
 
-- <:Gstatus> that bring up the output of <git status>
-- <:Gblame>  brings up an interactive vertical split with <git blame> output. Press enter on a line to edit the commit where the line changed, or o to open it in a split. When you're done, use <:Gedit> in the historic buffer to go back to the work tree version.
-- <:Gmove> does a <git mv> on a file and simultaneously renames the buffer.
-- <:Gremove> does a <git rm> on a file and simultaneously deletes the buffer.
-- <:Gread> is a variant of <git checkout --> filename that operates on the buffer rather than the filename. This means you can use *u* to undo it and you never get any warnings about the file changing outside Vim.
-- <:Gwrite> writes to both the work tree and index versions of a file, making it like git add when called from a work tree file and like git checkout when called from the index or a blob in history.
+- `:Gstatus` that bring up the output of `git status`
+- `:Gblame`  brings up an interactive vertical split with `git blame` output. Press enter on a line to edit the commit where the line changed, or o to open it in a split. When you're done, use `:Gedit` in the historic buffer to go back to the work tree version.
+- `:Gmove` does a `git mv` on a file and simultaneously renames the buffer.
+- `:Gremove` does a `git rm` on a file and simultaneously deletes the buffer.
+- `:Gread` is a variant of `git checkout --` filename that operates on the buffer rather than the filename. This means you can use *u* to undo it and you never get any warnings about the file changing outside Vim.
+- `:Gwrite` writes to both the work tree and index versions of a file, making it like git add when called from a work tree file and like git checkout when called from the index or a blob in history.
 
 If you are interested I sugegst to watch this small video to get an idea of the potential of this great plugin: [Fugitive.vim - a complement to command line git](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)
 
 git submodule
 ---
 
-This project use <git submodule>, to track some of the vim plugin I used:
+This project use `git submodule`, to track some of the vim plugin I used:
 
 - [snipmate.vim](https://github.com/msanders/snipmate.vim.git)
 - [syntastic](https://github.com/scrooloose/syntastic.git)
