@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/cin0345a/.vim/bundle/vim-puppet/snippets'
-let g:netrw_dirhist_2='/home/cin0345a/.vim/snippets'
-let g:netrw_dirhist_3='/home/cin0345a/.vim/bundle/syntastic/syntax_checkers/puppet'
-let g:netrw_dirhist_4='/home/cin0345a/.vim/.git'
