@@ -33,6 +33,13 @@ You should see an output similar to this one:
     remote: Total 17 (delta 1), reused 13 (delta 1)
     Unpacking objects: 100% (17/17), done.
 
+### Install the submodule
+
+Move into the new .vim directory and run this command:
+
+    git pull && git submodule init && git submodule update && git submodule status
+
+This will pull all the submodule used in this bundle.
 
 ### vimrc file
 
