@@ -39,6 +39,7 @@ Move into the new .vim directory and run this command:
 
     git pull && git submodule init && git submodule update && git submodule status
 
+
 This will pull all the submodules used in this bundle.
 
 ### vimrc file
