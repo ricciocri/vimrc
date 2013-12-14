@@ -15,6 +15,7 @@ Using this repository you'll enable the following plugins:
 - **tabular** Sometimes, it's useful to line up text. Naturally, it's nicer to have the computer do this for you, since aligning things by hand quickly becomes unpleasant.
 - **vim-puppet** Make vim more Puppet friendly!
 - **vim-fugitive** Provides an amazingly deep Git integration for vim.
+- **vim-markdown** Syntax highlighting, matching rules and mappings for Markdown
 
 Also you'll find a snippets directory with a custom list of [snippet for Puppet](https://github.com/ricciocri/vimrc/blob/master/snippets/puppet.snippets).
 
@@ -123,7 +124,24 @@ Another great plugin, with this you can control directly from vim the status of 
 - `:Gread` is a variant of `git checkout --` filename that operates on the buffer rather than the filename. This means you can use *u* to undo it and you never get any warnings about the file changing outside Vim.
 - `:Gwrite` writes to both the work tree and index versions of a file, making it like git add when called from a work tree file and like git checkout when called from the index or a blob in history.
 
-If you are interested I sugegst to watch this small video to get an idea of the potential of this great plugin: [Fugitive.vim - a complement to command line git](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)
+If you are interested I suggest to watch this small video to get an idea of the potential of this great plugin: [Fugitive.vim - a complement to command line git](http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/)
+
+### [vim-markdown](https://github.com/plasticboy/vim-markdown)
+
+Syntax highlighting, matching rules and mappings for [Markdown](https://github.com/plasticboy/vim-markdown).
+
+*Options*
+
+Disable Folding
+
+Add the following line to your .vimrc to disable folding.
+
+`let g:vim_markdown_folding_disabled=1`
+Set Initial Foldlevel
+
+Add the following line to your .vimrc to set the initial foldlevel. This option defaults to 0 (i.e. all folds are closed) and is ignored if folding is disabled.
+
+`let g:vim_markdown_initial_foldlevel=1`
 
 git submodule
 ---
@@ -135,5 +153,4 @@ This project use `git submodule`, to track some of the vim plugin I used:
 - [tabular](https://github.com/godlygeek/tabular.git)
 - [vim-puppet](https://github.com/rodjek/vim-puppet.git)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive.git)
-
-
+- [vim-markdown](https://github.com/plasticboy/vim-markdown)
