@@ -1,5 +1,5 @@
 call pathogen#infect()
-set background=dark
+"set background=dark
 syntax on
 
 set nocompatible
@@ -17,3 +17,5 @@ let g:syntastic_auto_loc_list=1
 
 "To enable Just puppet-lint and disable the parser uncomment next line
 "let g:syntastic_puppet_checkers=['puppetlint']
+"
+let g:vim_markdown_folding_disabled=1
