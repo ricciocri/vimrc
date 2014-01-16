@@ -49,25 +49,25 @@ snippet def
 	define ${1:defname}(${2:args}) {
 	  ${3:#code}
 	} # Define: $1
-snippet #head
-        # == Class: ${1:classname}
-        #
-        # Everything required to run Puppet automatically on a client.
-        #
-        # === Parameters
-        #
-        # ${2:No parameters.}
-        #
-        # === Variables
-        #
-        # ${3:No variables used.}
-        #
-        # === Defaults
-        #
-        # ${4:No variables used.}
+snippet head
+	# == Class ${1:classname}
+	#
+	# ${2:Everything required to run Puppet automatically on a client.}
+	#
+	# === Parameters
+	# ${3:No parameters.}
+	#
+	# === Variables
+	#
+	# ${4:No variables used.}
+	#
+	# === Defaults
+	#
+	# ${5:No variables used.}
 	# Author:: `system("git config user.name")` (<`system("git config user.email")`>)
 	# Date:: `system("ruby -e 'puts Time.now'")`
-snippet #class
+	#
+snippet class
 	# Module:: ${1:modulename}
 	# Class: ${2:classname}
 	#
