@@ -2,38 +2,38 @@
 snippet file
 	file {
 	  "${1:filename}":
-	    ensure => "${3:file}",
-	    source => "puppet:///${2:source}",
-	    owner  => "${4:root}",
-	    group  => "${5:root}",
-	    mode   => '${6:0755}';
+	    ensure => '${3:file}',
+	    source => 'puppet:///${2:source}',
+	    owner  => '${4:root}',
+	    group  => '${5:root}',
+	    mode   => '${6:0755}',
 	}
 snippet exec
 	exec {
 	  "${1:name}":
-	    command     => "${2:command}",
-	    refreshonly => "${3:true}",
-	    onlyif      => "${4:run_if_true}",
-	    unless      => "${5:run_if_false}",
+	    command     => '${2:command}',
+	    refreshonly => '${3:true}',
+	    onlyif      => '${4:run_if_true}',
+	    unless      => '${5:run_if_false}',
 	}
 snippet package
 	package {
 	  "${1:package_name}":
-	    ensure   => "${2:installed}";
+	    ensure   => '${2:installed}',
 	}
 snippet service
 	service {
 	  "${1:service_name}":
-	    ensure   => "${2:running}";
-	    enable   => "${3:true}";
+	    ensure   => '${2:running}',
+	    enable   => '${3:true}",
 	}
 snippet cron
 	cron {
 	  "${1:name}":
-	    command => "${2:command}",
-	    hour    => ${3:hour},
-	    minute  => ${4:minute},
-	    day     => ${5:day};
+	    command => '${2:command}',
+	    hour    => '${3:hour}'
+	    minute  => '${4:minute}'
+	    day     => '${5:day}'
 	}
 snippet class
 	# Class:: $1
@@ -104,9 +104,9 @@ snippet ?
 	  }
 snippet user
 	user{"${1:user}":
-		comment		=> "${2:$1}",
-		ensure		=> present,
-		managehome	=> true,
+		comment		=> '${2:$1}',
+		ensure		=> 'present',
+		managehome	=> 'true',
 		home		=> "${3:/home/$1}"
 	}
 snippet group
