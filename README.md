@@ -16,6 +16,10 @@ Using this repository you'll enable the following plugins:
 - **vim-puppet** Make vim more Puppet friendly!
 - **vim-fugitive** Provides an amazingly deep Git integration for vim.
 - **vim-markdown** Syntax highlighting, matching rules and mappings for Markdown
+- **nerdtree**  File manager under vim
+- **vim-nerdtree-tabs** Add automatically nerdtree on every new tab.
+- **tcomment_vim** Easily manage comments in every programming language.
+- **lucius theme** My favorite theme for vim. 
 
 Also you'll find a snippets directory with a custom list of [snippet for Puppet](https://github.com/ricciocri/vimrc/blob/master/snippets/puppet.snippets).
 
@@ -45,10 +49,17 @@ This will pull all the submodules used in this bundle.
 
 ### vimrc file
 
-Inside the repository there is also the .vimrc file that you have to link in your $HOME, to do this just run the following commands in the terminal
+Inside the repository there are also 2 .vimrc files that you can use, to use one of them you just have to link it in your $HOME, to do this just run the following commands in the terminal
+
+Basic .vimrc that enable most of the plugins:
 
     cd
     ln -s .vim/.vimrc .
+
+Full .vimrc that enable most of the plugins + nerdtree and tabs + lucius theme + use of the mouse under vim.
+
+    cd
+    ln -s .vim/.vimrc_full .vimrc
 
 
 Longer Description of the plugin used:
@@ -97,7 +108,7 @@ This plugin it's great to have an automatic alignment of all your => and can be 
 
 ### [snipmate.vim](https://github.com/msanders/snipmate.vim.git)
 
-This plugin it's probably my favourite in this bundle, with it you can just type the name of a puppet resource such as file, press the  `tab` key and get you'll get a result like this:
+This plugin it's probably my favourite in this bundle, with it you can just type the name of a puppet resourcd such as file, press the  `tab` key and get you'll get a result like this:
 
 
 file {
@@ -143,6 +154,23 @@ Add the following line to your .vimrc to set the initial foldlevel. This option 
 
 `let g:vim_markdown_initial_foldlevel=1`
 
+### [nerdtree](https://github.com/scrooloose/nerdtree)
+
+The NERD tree allows you to explore your filesystem and to open files and directories. It presents the filesystem to you in the form of a tree which you
+manipulate with the keyboard and/or mouse.
+
+### [tcomment_vim](https://github.com/tomtom/tcomment_vim)
+
+tcomment provides easy to use, file-type sensible comments for Vim. It can handle embedded syntax.
+
+TComment works like a toggle, i.e., it will comment out text that contains uncommented lines, and it will remove comment markup for already commented text (i.e. text that contains no uncommented lines).
+
+If the file-type is properly defined, TComment will figure out which comment string to use. Otherwise you use |tcomment#DefineType()| to override the default choice.
+
+TComment can properly handle an embedded syntax, e.g., ruby/python/perl regions in vim scripts, HTML or JavaScript in php code etc.
+
+If you use my .vimrc just select a block of text and use the keys ctrl-- (the key ctrl and 2 times the key -) to add comments/uncomments all the lines.
+
 git submodule
 ---
 
@@ -154,3 +182,5 @@ This project use `git submodule`, to track some of the vim plugin I used:
 - [vim-puppet](https://github.com/rodjek/vim-puppet.git)
 - [vim-fugitive](https://github.com/tpope/vim-fugitive.git)
 - [vim-markdown](https://github.com/plasticboy/vim-markdown)
+- [nerdtree](https://github.com/scrooloose/nerdtree)
+- [tcomment_vim](https://github.com/tomtom/tcomment_vim)
