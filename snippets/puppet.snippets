@@ -25,15 +25,15 @@ snippet service
 	service {
 	  "${1:service_name}":
 	    ensure   => '${2:running}',
-	    enable   => '${3:true}",
+	    enable   => '${3:true}',
 	}
 snippet cron
 	cron {
 	  "${1:name}":
 	    command => '${2:command}',
-	    hour    => '${3:hour}'
-	    minute  => '${4:minute}'
-	    day     => '${5:day}'
+	    hour    => '${3:hour}',
+	    minute  => '${4:minute}',
+	    day     => '${5:day}',
 	}
 snippet class
 	# Class:: $1
@@ -42,6 +42,19 @@ snippet class
 	class ${1:classname} {
 	  ${2:#code...}
 	} # Class:: $1
+snippet class2
+	# Module:: ${1:modulename}
+	# Class: ${2:classname}
+	#
+	# ${3:description}
+	#
+	# Author:: `system("git config user.name")` (<`system("git config user.email")`>)
+	# Date:: `system("ruby -e 'puts Time.now'")`
+	#
+	class $1::$2
+	{
+
+	}
 snippet def
 	# Define:: $1
 	# Args:: $2
@@ -67,19 +80,6 @@ snippet head
 	# Author:: `system("git config user.name")` (<`system("git config user.email")`>)
 	# Date:: `system("ruby -e 'puts Time.now'")`
 	#
-snippet class
-	# Module:: ${1:modulename}
-	# Class: ${2:classname}
-	#
-	# ${3:description}
-	#
-	# Author:: `system("git config user.name")` (<`system("git config user.email")`>)
-	# Date:: `system("ruby -e 'puts Time.now'")`
-	#
-	class $1::$2
-	{
-
-	}
 snippet case
 	case $${1:variable} {
 		default: { ${2} }
