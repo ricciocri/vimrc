@@ -9,7 +9,7 @@
 	url = git://github.com/godlygeek/tabular.git
 [submodule "bundle/vim-puppet"]
 	path = bundle/vim-puppet
-	url = git://github.com/rodjek/vim-puppet.git
+	url = git://github.com/ricciocri/vim-puppet.git
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
